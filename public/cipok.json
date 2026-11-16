@@ -1,0 +1,46 @@
+{
+    "cipok": [
+        {
+            "id": 1,
+            "nev": "Air Zoom Pegasus 40",
+            "ar": 45990,
+            "raktaron": true,
+            "kiadasDatuma": "2023-05-18"
+        },
+        {
+            "id": 2,
+            "nev": "Ultraboost Light",
+            "ar": 62990,
+            "raktaron": false,
+            "kiadasDatuma": "2023-02-01"
+        },
+        {
+            "id": 3,
+            "nev": "GEL-Kayano 30",
+            "ar": 54990,
+            "raktaron": true,
+            "kiadasDatuma": "2023-07-12"
+        },
+        {
+            "id": 4,
+            "nev": "Speedcross 6 GTX",
+            "ar": 71990,
+            "raktaron": true,
+            "kiadasDatuma": "2022-11-05"
+        },
+        {
+            "id": 5,
+            "nev": "Classic Leather",
+            "ar": 32990,
+            "raktaron": false,
+            "kiadasDatuma": "2021-09-23"
+        },
+        {
+            "id": 6,
+            "nev": "Terrex Free Hiker 2 GTX",
+            "ar": 84990,
+            "raktaron": true,
+            "kiadasDatuma": "2024-03-08"
+        }
+    ]
+}
