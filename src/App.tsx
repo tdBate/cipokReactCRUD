@@ -53,37 +53,39 @@ function App() {
   }
 
   return (<>
-    <h2>Cipok lista</h2>
+    <h1 className="text-center">Cipő</h1>
     <div className="container">
-      <div className="row">
+      <div className="row g-3">
         <div className="col-sm-12 mb-3">
           <form onSubmit={handlePost}>
-            <label htmlFor="nev">Név</label>
-            <input value={nev} onChange={(e) => setNev(e.target.value)} name="nev" type="text" /><br />
+            <label className="form-label" htmlFor="nev">Név</label>
+            <input className="form-control" value={nev} onChange={(e) => setNev(e.target.value)} name="nev" type="text" /><br />
 
-            <label htmlFor="ar">Ár</label>
-            <input value={ar} onChange={(e) => setAr(parseInt(e.target.value))} name="ar" type="number" /><br />
+            <label className="form-label" htmlFor="ar">Ár</label>
+            <input className="form-control" value={ar} onChange={(e) => setAr(parseInt(e.target.value))} name="ar" type="number" /><br />
 
-            <label htmlFor="raktaron">Raktáron</label>
-            <input value={raktaron ? 0 : 1} onChange={(e) => setRaktaron(e.target.value == "checked" ? true : false)} name="raktaron" type="checkbox" /><br />
+            <label className="form-label" htmlFor="raktaron">Raktáron</label>
+            <input className="form-check-input" value={raktaron ? 0 : 1} onChange={(e) => setRaktaron(e.target.value == "checked" ? true : false)} name="raktaron" type="checkbox" /><br />
 
-            <label htmlFor="date">Dátum</label>
-            <input value={datum.toLocaleDateString("sv-SE")} onChange={(e) => setDatum(new Date(e.target.value))} name="date" type="date" /><br />
+            <label className="form-label" htmlFor="date">Dátum</label>
+            <input className="form-control" value={datum.toLocaleDateString("sv-SE")} onChange={(e) => setDatum(new Date(e.target.value))} name="date" type="date" /><br />
 
-            <button type="submit">Submit</button>
+            <button className="btn btn-primary" type="submit">Submit</button>
           </form>
         </div>
 
         {cipok.map(item => (
           <>
-            <div className="card col-sm-6" key={item.id}>
-              <div className="card-title">
-                <h3>{item.nev}</h3>
-              </div>
-              <div className="card-body">
-                <p>Ár: {item.ar} Ft</p>
-                <p>Raktáron: {item.raktaron ? "igen" : "nem"}</p>
-                <p>Kiadás dátuma: {item.kiadasDatuma}</p>
+            <div key={item.id} className="col-sm-4">
+              <div className="card">
+                <div className="card-title">
+                  <h3>{item.nev}</h3>
+                </div>
+                <div className="card-body">
+                  <p>Ár: {item.ar} Ft</p>
+                  <p>Raktáron: {item.raktaron ? "igen" : "nem"}</p>
+                  <p>Kiadás dátuma: {item.kiadasDatuma}</p>
+                </div>
               </div>
             </div>
           </>
