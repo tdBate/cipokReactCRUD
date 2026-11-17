@@ -1,5 +1,5 @@
 export interface Cipo {
-    id: number
+    id?: number
     nev: string
     ar: number
     raktaron: boolean
